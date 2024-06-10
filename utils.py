@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use('Agg')  
+matplotlib.use('Agg')  # Use Agg backend for non-GUI environments
 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -8,12 +8,12 @@ from collections import Counter
 import pandas as pd
 import io
 import base64
+from nltk.corpus import stopwords
 
 nltk.download('punkt')
 nltk.download('stopwords')
-from nltk.corpus import stopwords
 
-STOP_WORDS = set(stopwords.words('english')).union({'the', 'and', 'to'})
+STOP_WORDS = set(stopwords.words('english')).union({'the', 'and', 'to', 'based', 'requires', 'ability', 'work', 'knowledge', 'including', 'technologies', 'using', 'new', 'techniques', 'tools', 'technologies', 'years', 'related', 'field', 'working', 'environment', 'degree', 'equivalent', 'preferred'})
 
 def generate_wordcloud(text):
     wordcloud = WordCloud(width=800, height=400, background_color='white', stopwords=STOP_WORDS).generate(text)
@@ -34,7 +34,7 @@ def generate_wordclouds(resume_text, job_description):
 def get_word_frequencies(text1, text2):
     def word_freq(text):
         words = nltk.word_tokenize(text.lower())
-        words = [word for word in words if word.isalnum() and word not in STOP_WORDS]
+        words = [word for word in words if word.isalnum() and word not in STOP_WORDS and not word.isdigit()]
         return Counter(words)
 
     resume_freq = word_freq(text1)

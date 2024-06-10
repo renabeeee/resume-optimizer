@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
 
-STOP_WORDS = set(stopwords.words('english')).union({'the', 'and', 'to', 'based', 'requires', 'ability', 'work', 'knowledge', 'including', 'technologies', 'using', 'new', 'techniques', 'tools', 'technologies', 'years', 'related', 'field', 'working', 'environment', 'degree', 'equivalent', 'preferred', 'ca', 'us'})
+STOP_WORDS = set(stopwords.words('english')).union({'the', 'and', 'to', 'based', 'requires', 'ability', 'work', 'knowledge', 'including', 'technologies', 'using', 'new', 'techniques', 'tools', 'technologies', 'years', 'related', 'field', 'working', 'environment', 'degree', 'equivalent', 'preferred', 'ca', 'us', 'los','angeles','el','la','well','behalf','southern','requirements','role','within','top','hiring','candidate'})
 
 def generate_wordcloud(text):
     wordcloud = WordCloud(width=800, height=400, background_color='white', stopwords=STOP_WORDS).generate(text)

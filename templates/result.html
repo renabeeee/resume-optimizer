@@ -5,10 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Optimizer Results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+      function toggleView(id) {
+          var x = document.getElementById(id);
+          if (x.style.display === "none") {
+              x.style.display = "block";
+          } else {
+              x.style.display = "none";
+          }
+      }
+  </script>
 </head>
 <body>
     <div class="container">
         <h1>Resume Optimizer Results</h1>
+        <div class="input-info">
+          <h2>Input Information</h2>
+          <div>
+              <h3>Resume</h3>
+              <button onclick="toggleView('resume-text')">View</button>
+              <p id="resume-text" style="display: none;">{{ resume_text }}</p>
+          </div>
+          <div>
+              <h3>Job Description</h3>
+              <button onclick="toggleView('job-text')">View</button>
+              <p id="job-text" style="display: none;">{{ job_description }}</p>
+          </div>
+      </div>
         <div class="row">
             <div class="column">
                 <div class="wordcloud">

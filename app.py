@@ -15,6 +15,8 @@ def index():
         resume_freq, job_freq = get_word_frequencies(resume_text, job_description)
         matching_keywords, missing_keywords, match_percentage = analyze_keywords(resume_text, job_description)
         return render_template('result.html', 
+                              resume_text=resume_text, job_description=job_description,
+
                                resume_wc=resume_wc, job_wc=job_wc, 
                                resume_freq=resume_freq, job_freq=job_freq,
                                matching_keywords=matching_keywords, missing_keywords=missing_keywords,     match_percentage=match_percentage)

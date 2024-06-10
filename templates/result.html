@@ -33,6 +33,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    
                 </div>
             </div>
             <div class="column">
@@ -61,6 +62,30 @@
                 </div>
             </div>
         </div>
+        <div class="analysis">
+          <h2>Keyword Analysis</h2>
+          <p>Percentage of matching keywords: {{ match_percentage }}%</p>
+
+          <div class="keywords">
+              <div class="column">
+                  <h3>Matching Keywords</h3>
+                  <ul>
+                      {% for keyword in matching_keywords %}
+                      <li>{{ keyword }}</li>
+                      {% endfor %}
+                  </ul>
+              </div>
+              <div class="column">
+                  <h3>Keywords</h3>
+                  <p>Consider adding these keywords to your resume</p>
+                  <ul>
+                      {% for keyword in missing_keywords %}
+                      <li>{{ keyword }}</li>
+                      {% endfor %}
+                  </ul>
+              </div>
+          </div>
+      </div>
     </div>
 </body>
 </html>

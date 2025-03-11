@@ -1,4 +1,6 @@
-#!/Users/serenagreen/Desktop/Actualize/resume-optimizer/venv/bin/python3.12
+#!/bin/sh
+'''exec' "/Users/serenagreen/Documents/Desktop folders/Actualize/resume-optimizer/venv/bin/python3.13" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

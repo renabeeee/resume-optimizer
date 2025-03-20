@@ -11,7 +11,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  color: #000;
 }
 
 .row {
@@ -97,4 +97,65 @@ th {
   .column {
       flex: 100%;
   }
+}
+
+.form-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+justify-items: center;
+}
+
+textarea {
+  width: 700px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #ddd; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 42px;
+  height: 42px;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  width: 60%;
+}
+
+.ptest{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.gray-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  text-align: center;
+  font-size: 16px;
 }

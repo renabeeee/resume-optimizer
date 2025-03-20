@@ -8,7 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <img src="{{ url_for('static', filename='images/resume-optimizer-logo.png') }}" alt="logo" class="logo">
+    </img>
         <h1>Resume Optimizer</h1>
+        <div class="ptest">
+            <p>Optimize your resume by comparing it with the job description. Upload your resume and the job description to get started.</p>
+        </div>
+        <div class="gray-text">Copy and paste text only</div>
         <form method="POST">
             {{ form.hidden_tag() }}
             <div class="form-group">
